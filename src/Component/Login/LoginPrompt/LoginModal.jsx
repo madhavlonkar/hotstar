@@ -94,6 +94,7 @@ export default function LoginModal(props) {
                             <form onSubmit={handleSubmit} className="formContainer">
                                 {error && <Alert severity="error" className="errorAlert">{error}</Alert>}
                                 <TextField
+                                    type='email'
                                     fullWidth
                                     margin="normal"
                                     label="Email"
