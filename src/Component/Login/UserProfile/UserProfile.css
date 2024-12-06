@@ -1,0 +1,58 @@
+/* UserProfile.css */
+
+/* Background Gradient */
+.profileBackground {
+    background-image: linear-gradient(0deg, rgba(15,16,20,1) 42%, rgba(14,21,36,1) 95%, rgba(14,21,36,1) 100%);
+}
+
+/* Button Styles */
+.profileButton {
+    padding: 12px  !important;
+    font-weight: bold !important;
+    border-radius: 4% !important;
+    width: 200px !important;
+}
+
+.subscribeButton {
+    background-color: rgb(8,78,211) !important;
+    color: white !important;
+}
+
+.helpButton {
+    background-color: rgb(32,40,58) !important;
+    color: white !important;
+}
+
+.logoutButton {
+    background-color: rgb(32,40,58) !important;
+    color: white !important;
+}
+
+/* Title Styles */
+.profileTitle {
+    font-weight: bold !important;
+}
+
+.profileSubtitle {
+    font-weight: bold !important;
+}
+
+.editButton {
+    font-weight: bold !important;
+}
+
+/* Container for Continue Watching Section */
+.continueWatchingSection {
+    padding-top: 40px !important;
+}
+
+/* SubTagline */
+.SubTagline {
+    background: #F8EB96;
+    background: radial-gradient(circle farthest-corner at center center, #F8EB96 0%, #C1A72E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.profileBoxPadding {
+    padding: 50px;
+}

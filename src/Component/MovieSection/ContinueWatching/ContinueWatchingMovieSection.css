@@ -1,0 +1,11 @@
+/* ContinueWatchingMovieSection.css */
+
+.continueWatchingTitle {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.movieGridContainer {
+    position: relative;
+    margin-bottom: 5px;
+}

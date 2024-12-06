@@ -1,0 +1,36 @@
+
+
+/* Styles for the category title paragraph */
+.category-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  /* Styles for the wrapper around the whole movie section */
+.movie-section-wrapper {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  /* Styles for the Grid container that wraps the movie items */
+  .grid-container {
+    position: relative;
+  }
+  
+  /* Styles for the movie items container */
+  .movie-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+  .left-scroll-button {
+    left: 0;
+  }
+
+  .right-scroll-button {
+    right: 0;
+  }
+  
+  

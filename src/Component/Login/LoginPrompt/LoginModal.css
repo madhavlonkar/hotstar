@@ -1,0 +1,88 @@
+/* LoginModal.css */
+
+/* Modal Style */
+
+
+.qrTextBold {
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+.qrTextMuted {
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.qrCodeContainer {
+    text-align: center;
+}
+
+.loginButton {
+    background-color: rgb(8, 82, 217);
+    color: white;
+    width: 200px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.modalBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    /* Restrict max height */
+    background-color: rgb(22, 24, 31);
+    border: 2px solid #000;
+    box-shadow: 24px;
+    border-radius: 16px;
+    overflow: auto;
+    /* Enable scrolling when content exceeds height */
+}
+
+.modalTitle {
+    font-weight: bold;
+    text-align: center;
+}
+
+.modalSubTitle {
+    text-align: center;
+}
+
+/* QR Code Section */
+.qrCodeSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-right: 2px solid rgb(255, 255, 255, 0.5);
+}
+
+/* For small screens, remove the border */
+@media (max-width: 600px) {
+    .qrCodeSection {
+        border-right: none;
+        /* Remove border on small screens */
+    }
+}
+
+.formSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    width: 100%;
+    max-width: 400px;
+}
+
+.errorAlert {
+    margin: 16px 0;
+}
+
+.buttonGroup {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}

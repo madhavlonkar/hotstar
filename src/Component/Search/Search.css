@@ -1,0 +1,66 @@
+.errorMessage {
+    color: red;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+/* Search.module.css */
+.containerPadding {
+    padding: 16px; /* Equivalent to padding: 2 in the sx prop */
+}
+
+.paddingRight {
+    padding-right: 16px; /* Equivalent to paddingRight: 2 in the sx prop */
+}
+
+/* Search.module.css */
+.searchInput {
+    border-radius: 10px;
+    background-color: #252833;
+}
+
+.searchInput .MuiOutlinedInput-root fieldset{
+    border-color: rgb(37, 40, 51);
+}
+
+.searchInput .MuiOutlinedInput-root:hover fieldset {
+    border-color: rgb(37, 40, 51);
+}
+
+.searchInput .MuiOutlinedInput-root.Mui-focused fieldset {
+    border-color: rgb(37, 40, 51);
+}
+
+.searchInput .MuiInputBase-input {
+    color: white;
+}
+
+.searchInput .MuiInputBase-input::placeholder {
+    font-weight: bold;
+    font-size: 20px;
+    color: #8F98B2;
+}
+
+.searchInputPadding {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+@media (min-width: 600px) {
+    .searchInputPadding {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.trendingTitle {
+    font-weight: bold;
+    margin-top: 32px; /* 8 * 4px (assuming 1 unit is 4px) */
+    color: white;
+}
+
+
+
+
+

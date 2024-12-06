@@ -1,0 +1,36 @@
+/* LoginPage.css */
+
+/* Background Gradient */
+
+
+/* Button Styles */
+.helpButton {
+    background-color: rgb(32,40,58);
+    color: white;
+    width: 200px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* Image Styles */
+.pageImage {
+    margin-top: 50px;
+    max-width: 100%;
+    
+}
+
+/* Typography Styles */
+.pageTitle {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pageSubtitle {
+    color: rgb(143,152,178,0.7);
+    font-weight: bold;
+}
+
+/* Login Modal Section */
+.loginModalSection {
+    padding-top: 2rem;
+}

@@ -1,0 +1,30 @@
+/* HomePage.css */
+
+/* Styles for the Grid container */
+.homePageContainer {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar styles */
+.sidebarGrid {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Main content area */
+.mainContentGrid {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+/* For small screen adjustments to prevent overlap with the sidebar icon */
+@media (max-width: 600px) {
+  .styledGridContainer {
+    height: auto;
+    padding-top: 60px;
+    /* Adjust the padding */
+  }
+}

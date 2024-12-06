@@ -1,0 +1,70 @@
+/* Sidebar.module.css */
+
+/* Sidebar styling */
+.sidebar {
+    background-image: linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.9) 100%);
+}
+
+/* Sidebar.module.css */
+.sidebarContentWrapper {
+    padding: 16px;
+    color: white;
+}
+/* Sidebar.module.css */
+.iconButtonWrapper {
+    position: absolute !important;
+    top: 10px !important;
+    left: 10px !important;
+    z-index: 1300 !important;
+}
+
+
+.centeredContent {
+    display: flex;
+    justify-content: center;
+}
+
+/* Sidebar.module.css */
+.subscribeContainer {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Navigation Items - centered and bold */
+.navItems {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white !important;
+}
+
+/* Subscribe Button */
+.subscribeButton {
+    height: 20px;
+    font-size: 10px;
+    color: gold;
+    border: none;
+    font-weight: bold;
+    width: 62px;
+    border-radius: 14px;
+    background-color: rgba(163, 124, 76, 0.3);
+}
+
+/* Drawer Paper */
+.drawerPaper {
+    width: 240px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Icon Button */
+.iconButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1300;
+}

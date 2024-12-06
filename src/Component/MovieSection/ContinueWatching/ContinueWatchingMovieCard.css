@@ -1,0 +1,27 @@
+/* ContinueWatchingMovieCard.css */
+
+/* Card styles */
+.cardRoot {
+    max-width: 345px;
+}
+
+/* CardMedia (Image) styles */
+.cardImage {
+    height: 190px;
+}
+
+/* CardContent styles */
+.cardContent {
+    background-color: rgb(18,18,18);
+}
+
+/* Typography styles for movie name */
+.movieTitle {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Typography styles for time left */
+.timeLeft {
+    color: rgb(255, 255, 255, 0.7);
+}

@@ -1,0 +1,14 @@
+.overlay-card-content{
+    max-width: fit-content;
+    background-color: rgb(26, 26, 26);
+}
+
+.hoverImg{
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.hoverButton{
+    background-color:#fff ;
+    color: #16181f;
+}

@@ -1,0 +1,75 @@
+
+.modal-container {
+  background-color: #0f1014;
+  border: 2px solid #16181f;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modal-title {
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  word-wrap: break-word;
+}
+
+.modal-description {
+  margin-top: 10px;
+  color: #b1c1e6;
+  font-weight: lighter;
+  font-size: 0.9rem;
+}
+
+.UAbutton {
+  background-color: rgba(146, 96, 20, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.UAbutton:hover {
+  background-color: #e68900;
+}
+
+.icon {
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .modal-container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .modal-title {
+      font-size: 1rem;
+  }
+
+  .modal-description {
+      font-size: 0.8rem;
+  }
+
+  .UAbutton {
+      font-size: 0.8rem;
+  }
+}
