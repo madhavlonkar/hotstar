@@ -31,13 +31,8 @@ export default function HoverCard({ movie }) {
       return `${hours}h ${minutes}m left`;
     };
 
-    let movieName=''
-    if(movie.title){
-      movieName=movie.title
-    }
-    else{
-      movieName=movie.name
-    }
+    let movieName=movie.title ||  movie.name
+    
 
     const movieToAdd = {
       id: movie.id,

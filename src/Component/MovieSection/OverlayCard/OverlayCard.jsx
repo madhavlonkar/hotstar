@@ -16,6 +16,8 @@ const style = {
 };
 
 export default function OverlayCard({ movie, releaseDate, open, handleClose }) {
+
+    let movieName = movie.title || movie.name;
     return (
         <div>
             <Modal
@@ -25,7 +27,7 @@ export default function OverlayCard({ movie, releaseDate, open, handleClose }) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style} className="modal-container">
-                   
+
                     <Grid container spacing={2}>
                         {/* Movie Image */}
                         <Grid item xs={12}>
@@ -37,6 +39,11 @@ export default function OverlayCard({ movie, releaseDate, open, handleClose }) {
                         </Grid>
                         {/* Movie Title and Info */}
                         <Grid item xs={12}>
+
+                            <Typography id="modal-modal-title" variant="h6" component="h2" className="movieName">
+                                {movieName}
+                            </Typography>
+
                             <Typography id="modal-modal-title" variant="h6" component="h2" className="modal-title">
                                 {releaseDate} • {movie.original_language.toUpperCase()} •
                                 <button className="UAbutton">U/A {movie.adult ? '18+' : '16+'}</button> •
@@ -44,6 +51,8 @@ export default function OverlayCard({ movie, releaseDate, open, handleClose }) {
                                 {movie.media_type ? movie.media_type.charAt(0).toUpperCase() + movie.media_type.slice(1) : 'Series'}
                                 <MovieCreationRoundedIcon className="icon" />
                             </Typography>
+
+
                         </Grid>
                         {/* Movie Overview */}
                         <Grid item xs={12}>

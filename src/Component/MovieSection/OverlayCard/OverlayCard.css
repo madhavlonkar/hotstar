@@ -24,6 +24,7 @@
   color: #fff;
   text-align: center;
   margin: 10px 0;
+  margin-bottom: 0;
   font-size: 1.2rem;
   word-wrap: break-word;
 }
@@ -52,6 +53,10 @@
 .icon {
   vertical-align: middle;
   margin-left: 4px;
+}
+
+.movieName{
+  text-align: center;
 }
 
 /* Responsive Styles */
