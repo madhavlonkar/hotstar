@@ -4,10 +4,13 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { Stack, Grid, Alert, useMediaQuery } from '@mui/material';
+import { Stack, Grid, Alert, useMediaQuery, FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, Snackbar } from '@mui/material';
 import QR from '../../../Assets/img/QR.png';
 import { useSelector } from 'react-redux';
 import './LoginModal.css';  // Import the CSS file
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { createPortal } from 'react-dom';
 
 const style = {
     width: { xs: '90%', sm: 1000 }, // Responsive width, kept here
@@ -15,10 +18,26 @@ const style = {
 };
 
 export default function LoginModal(props) {
+
+
+    const [showPassword, setShowPassword] = React.useState(false);
+
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
+
+    const handleMouseUpPassword = (event) => {
+        event.preventDefault();
+    };
+
+
+
+    const [snackbarOpen, setSnackbarOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
     const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [error, setError] = React.useState();
+    const [password, setPassword] = React.useState();
 
     const userData = useSelector(state => state.userData);
 
@@ -27,7 +46,6 @@ export default function LoginModal(props) {
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
-        setError();
         setOpen(false);
     };
 
@@ -44,9 +62,7 @@ export default function LoginModal(props) {
             props.handleLogin(true);
             handleClose();
         } else {
-            setEmail('');
-            setPassword('');
-            setError("Incorrect username or password");
+            setSnackbarOpen(true)
         }
     };
 
@@ -90,9 +106,10 @@ export default function LoginModal(props) {
                         </Grid>
 
                         {/* Login Form Section */}
+
                         <Grid item xs={12} sm={6} className="formSection">
                             <form onSubmit={handleSubmit} className="formContainer">
-                                {error && <Alert severity="error" className="errorAlert">{error}</Alert>}
+
                                 <TextField
                                     type='email'
                                     fullWidth
@@ -102,7 +119,7 @@ export default function LoginModal(props) {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
-                                <TextField
+                                {/* <TextField
                                     fullWidth
                                     margin="normal"
                                     label="Password"
@@ -110,9 +127,34 @@ export default function LoginModal(props) {
                                     variant="outlined"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                />
+                                /> */}
+                                <FormControl fullWidth margin="normal" variant="outlined">
+                                    <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                                    <OutlinedInput
+                                        id="outlined-adornment-password"
+                                        type={showPassword ? 'text' : 'password'}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        value={password}
+                                        endAdornment={
+                                            <InputAdornment position="end">
+                                                <IconButton
+                                                    aria-label={
+                                                        showPassword ? 'hide the password' : 'display the password'
+                                                    }
+                                                    onClick={handleClickShowPassword}
+                                                    onMouseDown={handleMouseDownPassword}
+                                                    onMouseUp={handleMouseUpPassword}
+                                                    edge="end"
+                                                >
+                                                    {showPassword ? <VisibilityOff className='Visibility' /> : <Visibility className='Visibility' />}
+                                                </IconButton>
+                                            </InputAdornment>
+                                        }
+                                        label="Password"
+                                    />
+                                </FormControl>
                                 <Stack direction="row" spacing={2} className="buttonGroup">
-                                    
+
                                     <Button
                                         type="submit"
                                         variant="contained"
@@ -127,6 +169,31 @@ export default function LoginModal(props) {
                     </Grid>
                 </Box>
             </Modal>
+
+
+
+
+            {createPortal(
+                <Snackbar
+                    open={snackbarOpen}
+                    autoHideDuration={3000}
+                    onClose={() => setSnackbarOpen(false)}
+                    anchorOrigin={{
+                        vertical: 'top',
+                        horizontal: 'center',  // Position the Snackbar at the top-right
+                    }}
+                >
+                    <Alert
+                        severity={'error'}
+                        onClose={() => setSnackbarOpen(false)}
+                        className='snackBar'
+                    >
+                        Incorrect username or password! Please try again......
+                    </Alert>
+                </Snackbar>,
+                document.body  // Render the Snackbar at the body level
+            )}
+
         </div>
     );
 }
