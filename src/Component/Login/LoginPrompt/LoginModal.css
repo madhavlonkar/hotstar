@@ -77,6 +77,8 @@
     color: white;
 }
 
+
+
 .Visibility{
     color: rgb(255, 255, 255,0.5);
 }
@@ -101,4 +103,8 @@
     display: flex;
     justify-content: center;
     gap: 16px;
+}
+
+.btnClose{
+    cursor: pointer;
 }

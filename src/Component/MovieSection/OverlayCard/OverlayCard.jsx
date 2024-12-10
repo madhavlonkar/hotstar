@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import MovieCreationRoundedIcon from '@mui/icons-material/MovieCreationRounded';
 import StarsRoundedIcon from '@mui/icons-material/StarsRounded';
-import { Typography, Grid } from '@mui/material';
+import { Typography, Grid, Stack } from '@mui/material';
 import './OverlayCard.css'; // Import the CSS file
 
 const style = {
@@ -11,8 +11,8 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '80%', 
-    maxWidth: '600px',
+    width: '80%',
+    maxWidth: '650px',
 };
 
 export default function OverlayCard({ movie, releaseDate, open, handleClose }) {
@@ -25,6 +25,7 @@ export default function OverlayCard({ movie, releaseDate, open, handleClose }) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style} className="modal-container">
+                   
                     <Grid container spacing={2}>
                         {/* Movie Image */}
                         <Grid item xs={12}>

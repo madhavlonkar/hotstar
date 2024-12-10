@@ -11,6 +11,7 @@ import './LoginModal.css';  // Import the CSS file
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { createPortal } from 'react-dom';
+import CloseIcon from '@mui/icons-material/Close';
 
 const style = {
     width: { xs: '90%', sm: 1000 }, // Responsive width, kept here
@@ -81,7 +82,13 @@ export default function LoginModal(props) {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
+
                 <Box sx={style} className="modalBox">
+
+                    <Stack direction={'row'} justifyContent={'end'}>
+                        <CloseIcon className='btnClose' onClick={handleClose}></CloseIcon>
+                    </Stack>
+
                     <Typography id="modal-modal-title" variant="h5" className="modalTitle">
                         Login or sign up to continue
                     </Typography>
