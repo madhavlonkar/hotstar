@@ -31,9 +31,17 @@ export default function HoverCard({ movie }) {
       return `${hours}h ${minutes}m left`;
     };
 
+    let movieName=''
+    if(movie.title){
+      movieName=movie.title
+    }
+    else{
+      movieName=movie.name
+    }
+
     const movieToAdd = {
       id: movie.id,
-      name: movie.title,
+      name: movieName,
       timeLeft: getRandomTimeLeft(),
       img: `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`,
     };

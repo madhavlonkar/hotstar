@@ -112,19 +112,11 @@ export default function LoginModal(props) {
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
                                 <Stack direction="row" spacing={2} className="buttonGroup">
-                                    <Button
-                                        type="button"
-                                        variant="contained"
-                                        color="primary"
-                                        size="large"
-                                        onClick={handleClose}
-                                    >
-                                        Close
-                                    </Button>
+                                    
                                     <Button
                                         type="submit"
                                         variant="contained"
-                                        color="success"
+                                        className='btnLogin'
                                         size="large"
                                     >
                                         Login
