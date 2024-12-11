@@ -7,7 +7,7 @@ async function getData(userUrl) {
         params: { language: 'en-US' },
         headers: {
             accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMWFlOGRkMzZjNDAyYWUwNTYxY2JlZTEwYzc4NTkwOCIsIm5iZiI6MTczMzE0MDgyNC4yOTUsInN1YiI6IjY3NGRhMTU4OWU3ZjZmNzNmMzAxNTUzZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.G9sC7v1d4lYCu_AN28-ylCPD0QzVjstzVb-khfqbzss'
+            Authorization: process.env.REACT_APP_API_TOKEN
         }
     };
 

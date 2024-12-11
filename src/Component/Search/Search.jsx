@@ -18,7 +18,7 @@ function SearchPage() {
     useEffect(() => {
         async function fetchMovies() {
             try {
-                const data = await getData('https://api.themoviedb.org/3/trending/movie/day');
+                const data = await getData(process.env.REACT_APP_TRENDING_MOVIES);
                 setMovies(data.results);
                 setFilteredMovies(data.results);
                 setLoading(false);

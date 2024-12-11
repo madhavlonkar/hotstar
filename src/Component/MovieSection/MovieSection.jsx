@@ -67,7 +67,7 @@ const MoviesSection = ({ category }) => {
 
     if (entry.isIntersecting) {
       setComponentVisible(true); // Set to true when the component is in the viewport
-    } 
+    }
   };
 
 
@@ -78,11 +78,11 @@ const MoviesSection = ({ category }) => {
 
     let url = '';
     if (category === 'Latest Releases') {
-      url = 'https://api.themoviedb.org/3/trending/movie/day';
+      url = process.env.REACT_APP_LATEST_RELEASES_URL;
     } else if (category === 'Top Rated') {
-      url = 'https://api.themoviedb.org/3/tv/top_rated';
+      url = process.env.REACT_APP_TOP_RATED_URL;
     } else if (category === 'TV Shows') {
-      url = 'https://api.themoviedb.org/3/trending/tv/day';
+      url = process.env.REACT_APP_TV_SHOWS_URL;
     }
 
     if (!url) {
@@ -103,7 +103,7 @@ const MoviesSection = ({ category }) => {
     }
   };
 
-  
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
@@ -127,9 +127,9 @@ const MoviesSection = ({ category }) => {
       fetchMovies(); // Fetch movies only when the component is visible
     }
   }, [isComponentVisible, category]); // Also depend on category to refetch if it changes ```javascript
-  
 
-  
+
+
 
   const scrollLeft = () => {
     const scrollAmount = window.innerWidth <= 600 ? 200 : 1890; // Adjust scroll amount for smaller screens
@@ -162,7 +162,7 @@ const MoviesSection = ({ category }) => {
           spacing={2}
           justifyContent="center"
           alignItems="center"
-          className="grid-container" 
+          className="grid-container"
         >
           <LeftScrollButton onClick={scrollLeft} className='left-scroll-button'>
             <ArrowBackIosOutlinedIcon />
@@ -170,18 +170,18 @@ const MoviesSection = ({ category }) => {
 
           <Grid item xs={12} ref={componentRef}>
             <Stack
-              
+
               ref={movieContainerRef}
               direction="row"
               spacing={2}
               className="movie-container"
             >
-              {loading && <p><CircularProgress/></p>}
+              {loading && <p><CircularProgress /></p>}
               {error && <p>Error loading movies: {error}</p>}
 
               {isComponentVisible && (
 
-                <Suspense fallback={<div><CircularProgress/></div>}>
+                <Suspense fallback={<div><CircularProgress /></div>}>
 
                   {!loading && !error && movies.map((movie) => (
                     <Movies key={movie.id} movie={movie} />
@@ -190,7 +190,7 @@ const MoviesSection = ({ category }) => {
                 </Suspense>
 
               )}
-              
+
             </Stack>
           </Grid>
 
